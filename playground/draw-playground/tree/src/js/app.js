@@ -9,6 +9,7 @@ class App {
         this.pixelRatio = window.devicePixelRatio > 1 ? 2 : 1;
 
         window.addEventListener('resize', this.resize.bind(this), false);
+        window.addEventListener('click', this.click.bind(this), false);
         this.resize();
 
     }
@@ -29,6 +30,10 @@ class App {
         new Tree(this.ctx, this.stageWidth / 2, this.stageHeight)
     }
 
+    click(event) {
+        const { clientX } = event;
+        new Tree(this.ctx, clientX, this.stageHeight);
+    }
 }
 
 window.onload = () => {
