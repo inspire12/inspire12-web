@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+  <style type="text/css">
+    .box {
+      transform: translate(0, 0);
+      transition: transform 500ms;
+    }
+
+    .box {
+      animation-name: movingBox;
+      animation-duration: 1300ms;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    @keyframes movingBox {
+      0% {
+        transform: translate(0, 0);
+        /* opacity: 0.3; */
+      }
+
+      25% {
+        /* opacity: 0.9; */
+      }
+
+      50% {
+        transform: translate(100px, 100px);
+        /* opacity: 0.2; */
+      }
+
+      100% {
+        transform: translate(30px, 30px);
+        /* opacity: 0.8; */
+      }
+    }
+
+    .box.move {
+      transform: translate(100px, 100px);
+    }
+  </style>
+</head>
+
+<body>
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <div class="box" style="width:500px; height:500px; background-color: black;"> </div>
+  <script src="" async defer></script>
+  <script>
+    var box = document.querySelector('.box');
+    box.addEventListener('transitionend', onTransitionEnd, false);
+
+    function onTransitionEnd() {
+
+    }
+  </script>
+</body>
+
+</html>
